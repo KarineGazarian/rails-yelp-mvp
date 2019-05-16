@@ -1,0 +1,26 @@
+
+<h2><%= @restaurant[:name] %></h2>
+
+<%= link_to 'Add new review', new_restaurant_review_path(@restaurant.id) , class: 'btn btn-primary float-right' %>
+
+<p>
+  Address: <%= @restaurant[:address] %>
+</p>
+
+<p>
+  Category: <%= @restaurant[:category] %>
+</p>
+
+<h3>List of reviews</h3>
+
+<ul>
+<% @restaurant.reviews.each do |review| %>
+  <li>
+    <%= review.content %>
+    <%= review.rating %>)
+  </li>
+<% end %>
+</ul>
+
+
+<%= link_to '🔙', restaurants_path %>

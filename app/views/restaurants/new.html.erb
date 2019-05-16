@@ -1,0 +1,23 @@
+<h2>Create a new restaurant</h2>
+
+<form action="<%= restaurants_path %>" method="post">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" />
+  <label for="address">Address:</label>
+  <input id="address" type="text" name="address" />
+  <label for="phone_number">Phone number:</label>
+  <input id="phone_number" type="text" name="phone_number" />
+  <label for="category">Choose category</label>
+  <select id="category" name="category">
+  <option>french</option>
+  <option>italian</option>
+  <option>chinese</option>
+  <option>belgian</option>
+  <option>japanese</option>
+</select>
+  <input type="submit" />
+</form>
+
+
+<%= link_to '🔙', restaurants_path %>
+
